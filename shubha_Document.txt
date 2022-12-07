@@ -1,0 +1,43 @@
+* Big data - huge amount of data in structured, unstructured or semi-structured data.
+* 5 v's 
+  -volume = the size of the data.
+  -velocity = the speed of the data.
+  -variety = represents different formats of data like structured,
+  unstructured and semi-structured data.
+  -value = extract useful data.
+  -veracity = Quality of data is analysed.
+  
+  Hadoop Architecture.
+  
+* HDFS(Hadoop distributed file system), YARN (Yet Another Resource Negotiator) and Map Reduce are the components in Hadoop Architecture.
+* HDFS is the storage layer,
+  YARN is the resource Management Layer,
+  Map Reduce is the Application Layer.
+  
+* HDFS is the storage layer for Hadoop.
+  Files in HDFS are broken into block-size chunks called data blocks.
+  these blocks are then stored in slave nodes in cluster.
+  HDFS follows Master-slave architecture.
+  it have 2 daemons NameNode and dataNode.
+  
+*The NameNode is the master daemon that runs on Master node.
+  NameNode stores in metadata system.
+*The dataNode is the slave node that runs on slave nodes.
+  DataNode stores in actual business data or unknown data.
+  
+*MapReduce works on key,value pairs.
+ The input to the map function and output from the reduce function is the key, value pair.
+ The function of the map tasks is to load, parse, filter, and transform the data.
+ The output of the map task is the input to the reduce task.
+ Reduce task then performs grouping and aggregation on the output of the map task.
+
+*HDFS is the distributed file system in Hadoop for storing big data. 
+MapReduce is the processing framework for processing vast data in the Hadoop cluster in a distributed manner. 
+YARN is responsible for managing the resources amongst applications in the cluster.
+
+*Hadoop Fault Tolerance- Each block of data is divided into multiple slaves which have a replica of each data chunk. 
+In this way, a file will be restored easily if it fails from one node.
+
+
+*A single node cluster means only one DataNode running and setting up
+ all the NameNode, DataNode, ResourceManager, and NodeManager on a single machine.
